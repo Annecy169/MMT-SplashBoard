@@ -1,5 +1,6 @@
 FROM node:12.2.0-alpine
 
+ADD . /app
 WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
