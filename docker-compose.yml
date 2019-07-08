@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+  spotify-web:
+    container_name: mmt-spotify-dev
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '80:3000'
+    environment:
+      - NODE_ENV=development
